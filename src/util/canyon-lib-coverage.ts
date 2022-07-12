@@ -202,7 +202,17 @@ function genTree(cov: any) {
 }
 
 function genTreeSummary(jsonx: any) {
-  let json = {children: JSON.parse(JSON.stringify(jsonx))} || {children: []}
+  let json = {
+    key:'root',
+    title:'root',
+    fullPath:'root',
+    children: JSON.parse(JSON.stringify(jsonx))
+  } || {
+    key:'root',
+    title:'root',
+    fullPath:'root',
+    children: []
+  }
 
   function getLeafCountTree(json: any) {
     if (json.children.length === 0) {
@@ -240,7 +250,7 @@ function genTreeSummary(jsonx: any) {
   }
 
   getLeafCountTree(json)
-  return json.children
+  return json
 }
 
 

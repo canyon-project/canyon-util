@@ -5,6 +5,7 @@ describe('blah', () => {
   it('works', async () => {
     const formatReportObjectRes = await CanyonUtil.formatReportObject(cov)
     console.log(formatReportObjectRes)
-    console.log(CanyonUtil.genTreeSummaryMain(formatReportObjectRes.coverage))
+    const s = CanyonUtil.genTreeSummaryMain(formatReportObjectRes.coverage)
+    console.log(s)
   });
 });
