@@ -250,7 +250,7 @@ function genTreeSummary(jsonx: any) {
   }
 
   getLeafCountTree(json)
-  return json
+  return [json]
 }
 
 
